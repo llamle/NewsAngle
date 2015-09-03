@@ -25,10 +25,15 @@ function($http){
   };
 
   o.upvote = function(post) {
-    return $http.put('/posts/' + post.id + '/upvote.json')
-      .success(function(data){
-        post.upvotes += 1;
-      });
+    return $http.put('/posts/' + post.id + '/upvote.json').success(function(data){
+      post.upvotes += 1;
+    });
+  };
+
+  o.downvote = function(post) {
+    return $http.put('/posts/' + post.id + '/upvote.json').success(function(data){
+      post.upvotes -= 1;
+    });
   };
 
   o.addComment = function(id, comment) {
@@ -36,10 +41,15 @@ function($http){
   };
 
   o.upvoteComment = function(post, comment) {
-    return $http.put('/posts/' + post.id + '/comments/'+ comment.id + '/upvote.json')
-      .success(function(data){
-        comment.upvotes += 1;
-      });
+    return $http.put('/posts/' + post.id + '/comments/' + comment.id + '/upvote.json').success(function(data){
+      comment.upvotes += 1;
+    });
+  };
+
+  o.downvoteComment = function(post, comment){
+    return $http.put('/posts/' + post.id + '/comments/' + comment.id + '/upvote.json').success(function(data){
+      comment.upvotes -= 1;
+    });
   };
 
   return o;

@@ -18,4 +18,8 @@ function($scope, posts){
     posts.upvote(post);
   };
 
+  $scope.incrementDownvotes = function(post) {
+    posts.downvote(post);
+  };
+
 }]);
