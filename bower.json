@@ -1,8 +1,8 @@
 {
-  "name": "flapper-news",
+  "name": "news-angle",
   "version": "0.0.0",
   "authors": [
-    "Albert Pai <iamalbertpai@gmail.com>"
+    "Leon Lamle <llamle@gmail.com>"
   ],
   "license": "MIT",
   "ignore": [
