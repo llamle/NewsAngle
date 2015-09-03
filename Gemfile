@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use PostgreSQL as the database for Active Record
+gem 'pg', '~> 0.18.2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -20,7 +20,6 @@ gem 'spring',      group: :development
 gem 'angular-rails-templates'
 gem 'angular_rails_csrf'
 gem 'devise', '~> 3.4.0'
-gem 'pg', '~> 0.18.2'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
