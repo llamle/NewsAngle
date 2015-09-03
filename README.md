@@ -33,6 +33,13 @@ This project was built using the following:
 * Bootstrap
 * Devise
 
+## Next Steps
+
+Currently I am working on the following:
+
+* Down voting
+* Error handling using ngMessage for Account Registration and Login
+
 ## Contributors
 
 Special Thanks to Albert Pai and Matt Green at Thinkster, their guides were a big help in getting started.
