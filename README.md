@@ -37,11 +37,11 @@ This project was built using the following:
 
 Currently I am working on the following:
 
-* Down voting
-* Error handling using ngMessage for Account Registration and Login
-* Allowing users to see all of their own posts when they click their name
-* Allowing users to save favorite posts
-* Allowing users to delete their own posts / comments
+* [X] Down voting
+* [ ] Error handling using ngMessage for Account Registration and Login
+* [ ] Allowing users to see all of their own posts when they click their name
+* [ ] Allowing users to save favorite posts
+* [ ] Allowing users to delete their own posts / comments
 
 ## Contributors
 
