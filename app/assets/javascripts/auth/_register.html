@@ -4,7 +4,7 @@
 
 <form name="form" ng-submit="register()" novalidate>
   <div class="form-group">
-    <input type="email" name="email" class="form-control" placeholder="Email" ng-model="user.email" required ng-minlength="6" ng-maxlength="20">
+    <input type="email" name="email" class="form-control" placeholder="Email" ng-model="user.email" required ng-minlength="6" ng-maxlength="50">
   </div>
   <div class="help-block" ng-messages="form.email.$error"  ng-show="form.email.$touched">
     <p ng-message="minlength">Your email is too short.</p>
@@ -24,7 +24,7 @@
     <input type="password" name="password" class="form-control" placeholder="Password" ng-model="user.password" required ng-minlength="6" ng-maxlength="20">
   </div>
   <div class="help-block" ng-messages="form.password.$error" ng-show="form.password.$touched">
-    <p ng-message="minlength">Your password is too short.</p>
+    <p ng-message="minlength">Your password must be at least 6 characters long.</p>
     <p ng-message="maxlength">Your password is too long.</p>
     <p ng-message="required">Your password is required.</p>
   </div>
