@@ -2,12 +2,13 @@
   <h1>Log In</h1>
 </div>
 
-<form name="form" ng-submit="login()">
+<form name="form" ng-submit="login()" novalidate>
+  <p ng-show="form.email.$dirty && form.password.$dirty">Username or Password Error.</p>
   <div class="form-group">
-    <input type="email" name="" class="form-control" placeholder="Email" ng-model="user.email">
+    <input type="email" name="email" class="form-control" placeholder="Email" ng-model="user.email" required>
   </div>
   <div class="form-group">
-    <input type="password" name="" class="form-control" placeholder="Password" ng-model="user.password">
+    <input type="password" name="password" class="form-control" placeholder="Password" ng-model="user.password" required>
   </div>
-  <input type="submit" class="btn btn-default" value="Log In">
+  <input type="submit" class="btn btn-default" value="Log In" ng-disabled="form.$invalid">
 </form>
