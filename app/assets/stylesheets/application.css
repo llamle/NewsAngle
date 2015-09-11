@@ -15,3 +15,21 @@
  *= require_tree .
  *= require_self
  */
+
+form[novalidate] input {
+  border-width: 3px;
+  border-style: solid;
+  border-color: #3498db;
+}
+
+input[required].ng-pristine {
+  border-color: #3498db;
+}
+
+input.ng-invalid.ng-dirty {
+  border-color: #e74c3c;
+}
+
+input.ng-valid.ng-dirty {
+  border-color: #2ecc71;
+}

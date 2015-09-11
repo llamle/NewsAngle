@@ -2,15 +2,31 @@
   <h1>Register</h1>
 </div>
 
-<form ng-submit="register()">
+<form name="form" ng-submit="register()" novalidate>
   <div class="form-group">
-    <input type="email" class="form-control" placeholder="Email" ng-model="user.email">
+    <input type="email" name="email" class="form-control" placeholder="Email" ng-model="user.email" required ng-minlength="6" ng-maxlength="20">
+  </div>
+  <div class="help-block" ng-messages="form.email.$error"  ng-show="form.email.$touched">
+    <p ng-message="minlength">Your email is too short.</p>
+    <p ng-message="maxlength">Your email is too long.</p>
+    <p ng-message="required">Your email is required.</p>
+    <p ng-message="email">This needs to be a valid email</p>
   </div>
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Username" ng-model="user.username">
+    <input type="text" name="username" class="form-control" placeholder="Username" ng-model="user.username" required ng-minlength="5" ng-maxlength="20">
+  </div>
+  <div class="help-block" ng-messages="form.username.$error"  ng-show="form.username.$touched">
+    <p ng-message="minlength">Your username is too short.</p>
+    <p ng-message="maxlength">Your username is too long.</p>
+    <p ng-message="required">Your username is required.</p>
   </div>
   <div class="form-group">
-    <input type="password" class="form-control" placeholder="Password" ng-model="user.password">
+    <input type="password" name="password" class="form-control" placeholder="Password" ng-model="user.password" required ng-minlength="6" ng-maxlength="20">
   </div>
-  <input type="submit" class="btn btn-default" value="Register">
+  <div class="help-block" ng-messages="form.password.$error" ng-show="form.password.$touched">
+    <p ng-message="minlength">Your password is too short.</p>
+    <p ng-message="maxlength">Your password is too long.</p>
+    <p ng-message="required">Your password is required.</p>
+  </div>
+  <input type="submit" class="btn btn-default" value="Register" ng-disabled="form.$invalid">
 </form>

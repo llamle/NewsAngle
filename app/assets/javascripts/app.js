@@ -1,4 +1,4 @@
-var app = angular.module('newsAngle', ['ui.router', 'templates', 'Devise'])
+var app = angular.module('newsAngle', ['ui.router', 'templates', 'Devise', 'ngMessages'])
 
 app.config([
 '$stateProvider',
