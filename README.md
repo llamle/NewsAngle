@@ -1,5 +1,9 @@
 # News Angle README
 
+## Live project
+
+You can find the live project here: http://newsangle.herokuapp.com/#/home
+
 ## Synopsis
 
 News Angle is a clone of the Reddit (https://www.reddit.com/) functionality, but built entirely in Angular using Ruby on Rails as an API and PostgreSQL as the database.
